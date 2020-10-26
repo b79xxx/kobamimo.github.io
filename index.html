@@ -1,404 +1,441 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+  <!-- 文字コード！-->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-  <meta property='og:type' content='website'>
-  <meta property='og:title' content='WebデザイナーKOBAYASHI MIO ポートフォリオ'>
-  <meta property='og:url' content='URLが入る'>
-  <meta property='og:description' content='Webデザイナー KOBAYASHI MIOのポートフォリオサイトです！'>
-  <meta property="og:image" content="img/ogp.png">
-  <meta name="description" content="Webデザイナー KOBAYASHI MIOのポートフォリオサイトです！" />
-  <title>Webデザイナー KOBAYASHI MIO ポートフォリオ</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-  <link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/photoswipe/photoswipe.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/photoswipe/default-skin/default-skin.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <link rel=”canonical” href=”URLが入る” />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ブラウザで表示されるタイトル !-->
+  <title>	IRI jewery</title>
+
+  <!-- SEO対策に必要な記述。サーバーアップしたら必ず記述しましょう -->
+  <meta name="description" content="jewelryのWebサイト。" />
+  <meta name="keywords" content="デザイン,jewelry,女の子," />
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="reset.min.css" media="all">
+	<link rel="stylesheet" href="style.css" media="all">
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<!-- slickのcssを読み込む -->
+	<link rel="stylesheet" href="slick/slick.css" media="all">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+
+	<!-- フォントのリンク -->
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+
+
+  <!-- jQueryをHTMLに読み込む-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	
+  <!--slickフォルダの中の jQueryを読み込む-->
+	<script type="text/javascript">	
+		// top画像のスライダー
+		$(function() {
+			// スライダーを書く
+			$('.picture').slick({
+				autoplay: true,
+				autoplaySpeed: 2000,
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+	//↓以下に複数枚のスライダーのjQueryを描いてください
+	//自動再生あり、自動再生のスピードを設定、ドットありに設定
+	$(function() {
+	
+	$('.slider').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		//画像下のドット（ページ送り）を表示
+		dots: true,
+		//自動再生あり
+		autoplay: true,
+		//自動再生のスピード
+		autoplaySpeed: 1000
+	});
+	
+	});
+	</script>
+
+	<!-- ヘッダーメニュー -->
+	<script type="text/javascript">
+		(function($) {
+				$(function() {
+						var $header = $('#top-head');
+						// Nav Fixed
+						$(window).scroll(function() {
+								if ($(window).scrollTop() > 350) {
+										$header.addClass('fixed');
+								} else {
+										$header.removeClass('fixed');
+								}
+						});
+						// Nav Toggle Button
+						$('#nav-toggle').click(function(){
+								$header.toggleClass('open');
+						});
+				});
+		})(jQuery);
+		</script>
+
+
 </head>
 
+<!-- コンテンツ部分のコードを記入していく -->
 <body>
-  <div id="wrapper">
-    <nav id="gnav" class="fixed">
-      <ul>
-        <li><a href="#works">WORKS</a></li>
-        <li><a href="#feature">FEATURE</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#skill">SKILL</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-    <header id="header">
-      <div class="inner">
-        <h1 class="logo">
-          <div class="logo-title">KOBAYASHI MIO</div>
-          <div class="logo-desc">PORTFOLIO</div>
-        </h1>
-      </div>
-    </header>
-    <main id="contents">
-      <section class="section" id="works">
-        <div class="inner">
-          <div class="section-title-area">
-            <h2 class="section-title">WORKS</h2>
-            <div class="section-intro">
-              <div class="section-text">
-                ツールの練習を兼ねた架空のファーストビューデザインと<br class="pc">
-                過去に制作した作品を紹介いたします。
-              </div>
-            </div>
-          </div>
-          <div class="section-body card-wrapper my-gallery">
-            <div class="card">
-              <a href="img/works/架空バイクショップ.png" data-size="960x720" class="card-image hover-action-01">
-                <img class="lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/架空バイクショップ.png" alt="" />
-              </a>
-              <div class="card-caption">
-                <div class="card-caption-title">Motor Magic（架空バイクショップ）</div>
-                <div class="card-caption-info">Design</div>
-              </div>
-            </div>
-            <div class="card">
-              <a href="img/works/架空歯医者.png" data-size="960x720" class="card-image hover-action-01">
-                <img class="lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/架空歯医者.png" alt="" />
-              </a>
-              <div class="card-caption">
-                <div class="card-caption-title">千歳烏山クリニック（架空歯医者）</div>
-                <div class="card-caption-info">Design</div>
-              </div>
-            </div>
-            <div class="card">
-              <a href="img/works/架空ファッションブランド.png" data-size="960x720" class="card-image hover-action-01">
-                <img class="lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/架空ファッションブランド.png" alt="" />
-              </a>
-              <div class="card-caption">
-                <div class="card-caption-title">BELLO（架空ファッションブランド）</div>
-                <div class="card-caption-info">Design</div>
-              </div>
-            </div>
-            <div class="card">
-              <a href="img/works/IMG_9293.jpg" data-size="960x720" class="card-image hover-action-01">
-                <img class="lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/IMG_9293.jpg" alt="" />
-              </a>
-              <div class="card-caption">
-                <div class="card-caption-title">基礎の練習</div>
-                <div class="card-caption-info">
-                  真鍮・シルバーを板や粒の状態から<br>
-                  パイプや半円を作る練習。<br>
-                  金属を接着させる作業は<br>
-                　なかなか思い通りになかなかいかず<br>
-                　基礎ではあるが苦労した作品の１つです。
-              </div>
-              </div>
-            </div>
-            <div class="card">
-              <a href="img/works/IMG_0659.jpg" data-size="960x720" class="card-image hover-action-01">
-                <img class="lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/IMG_0659.jpg" alt="" />
-              </a>
-              <div class="card-caption">
-                <div class="card-caption-title">エースライトジュエリー</div>
-                <div class="card-caption-info">
-                  エースライトという石膏を使ったジュエリー。<br>
-                  これは紙でハートの形を作り、立体の形に戻す<br>
-                  というコンセプトでつくったジュエリーです。<br>
-                  写真のものと合わせて計５シリーズつくり、<br>
-                  もとは同じハートの形でもアプローチを変えると<br>
-                  まったく別の姿になるという作品です。
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <a href="img/works/IMG_7655.jpg" data-size="960x720" class="card-image hover-action-01">
-                <img class="lazyload fadein" src="img/placeholder4x3.png" data-src="img/works/IMG_7655.jpg" alt="" />
-              </a>
-              <div class="card-caption">
-                <div class="card-caption-title">純金にまつわるジュエリー</div>
-                <div class="card-caption-info">
-                  純金の意味を考え２つの指輪を作成。<br>
-                  現代では工業製品に使われてる金ですが<br>
-                  はるか昔は限られた人間にしか<br>
-                  触れることができなかった金を表現しています。<br>
-                  左の携帯の基盤を使った指輪は<br>
-                  実際自分の携帯を分解し作っています。
+		<!-- ヘッダーの部分 -->
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="feature">
-        <div class="inner">
-          <div class="section-title-area">
-            <h2 class="section-title">FEATURE</h2>
-            <div class="section-intro">
-              今回はジュエリーショップのHPを作ります。
-            </div>
-          </div>
-          <div class="section-body">
-            <div class="section-image">
-              <a href="https://webdesigner-go.com/" class="hover-action-01" target="_blank"><img
-                  src="img/feature/架空ジュエリーショップ.png" alt=""></a>
-            </div>
-            <div class="section-desc">
-              <div class="section-text">
-                <span class="text-bold">■ジュエリーブランド</span><br>
-                今回は自分でオリジナルジュエリーブランドのHPを作る設定です<br><br>
-                <span
-                  class="text-bold">■制作フロー</span><br>
-                  ・目的/目標を決める<br>
-                   　目的：新しく作ったブランドを多くの人に知ってもらう<br>
-                   　目標：初動の売上を上げ、予算達成できるようにする<br>
-                    <br>
-                  ・競合サイトを調べる<br>
-                   　今回スタージュエリーやアガットといった価格帯や<br>
-                   　取扱ラインナップが近いブランドのHPを調べて作成しました。<br>
-                  <br>
-                   ・ペルソナ策定<br>
-                     　20代~30代の女性<br>
-                    　 丸の内や新宿に勤めるOL<br>
-                    　 自分で稼ぎ、ご褒美にジュエリーを購入できる<br>
-                    　 休日は趣味のヨガ、カフェ巡りをする。<br>
-                     　ハイジュエリーまでいかないが毎日つけるジュエリー<br>
-                     　髪型はセミロング、服はオフィスカジュアル<br>
-                     　仕事は営業職<br>
-                   <br>
-                   ・ワイヤーフレーム作成<br>
-                   　手書きで下書きを書き、Photoshopで<br>
-                   　白黒に枠を書いてイメージを固めていきました。<br>
-                   <br>
-                   ・テーマ/ポイント
-                   　今回設定したジュエリーブランドは<br>
-                   　服装もオフィスカジュアルが多いイメージの女性。<br>
-                   　そのため背景や文字を落ち着いたカラーにし<br>
-                   　文字情報を少なくすることで<br>
-                   　写真の印象を残してもらえるようにしました。<br>
-                   　色はベージュを軸に３色を使用しました。<br>
-                   　<br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="about">
-        <div class="inner">
-          <div class="section-title-area">
-            <h2 class="section-title">KOBAYASHI MIO</h2>
-            <div class="section-intro">
-              1993/12/7 TOKYO
-            </div>
-          </div>
-          <div class="section-body">
-            <div class="section-image">
-              <img class="lazyload fadein" data-src="img/about/0.jpg" alt="">
-            </div>
-            <div class="section-desc">
-              <div class="section-text">
+	<header id="top-head">
+		<div class="inner">
+				<div id="mobile-head">
+						<h1 class="logo"><img src="images/logo-t.png" alt="IRI jewelry"></h1>
+						<div id="nav-toggle">
+								<div>
+										<span></span>
+										<span></span>
+										<span></span>
+								</div>
+						</div>
+				</div>
+				<nav id="global-nav">
+						<ul>
+							<li><a href="#aaa" class="btn-shine">About</a></li>
+							<li><a href="#bbb" class="btn-shine">Collection</a></li>
+							<li><a href="https://irijewelry.stores.jp/" class="btn-shine">OnlineShop</a></li>
+							<li><a href="#ccc" class="btn-shine">News</a></li>
+							<li><a href="#ddd" class="btn-shine">Contact</a></li>
+						</ul>
+				</nav>
+		</div>
+			
+	</header>
 
-                【学歴】<br>
-                2012年　都立工芸高校アートクラフト科卒業<br>
-                2015年　学校法人ヒコみずのジュエリーカレッジ<br>
-                　　　　 ファッションアートアクセサリーコース卒業<br>
-                【資格】<br>
-                普通運転免許<br>
-                <br>
-                【趣味】<br>
-                バラエティ鑑賞・ラジオ鑑賞・飼い猫と遊ぶ<br>
-                <br>
-                高校では金属について勉強しており、<br>
-                専門学校ではジュエリーについて学んでいました。<br>
-                ジュエリーの中でも、ファッションショーなどで出てくる<br>
-                コンテンポラリージュエリーを中心に学んでいたため<br>
-                アクリルや樹脂、木材と幅の広い素材を使って作品を作成していました。<br>
-                <br>
-                これまで勤めてきた仕事を通して今までを振り返ると<br>
-                高校や専門で学んだスキルを活かせていませんでした。<br>
-                そんな中でデザインにかかわる仕事がしたい！と<br>
-                2020年１月よりオンラインスクールに通いwebデザインを勉強。<br>
-                勉強をしていく中で、webデザインの魅力に惹かれ<br>
-                webデザイナーになる決心をしました。<br>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="skill">
-        <div class="inner">
-          <div class="section-title-area">
-            <h2 class="section-title">SKILL</h2>
-            <div class="section-intro">
-            </div>
-          </div>
-          <div class="section-body card-wrapper">
-            <div class="card">
+	<!-- メインの部分 -->
+	<main>
+		<!-- スライダーTOP画像の部分 -->
+		<div class="picture anime">
+			<!-- <img src="images/ring01.jpg"> -->
+			<img src="images/ring02.jpg">
+			<img src="images/ring03.jpg">
+		</div>
 
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">HTML/CSS</h3>
-                <div class="rating">
-                  <div class="rate rate1"></div>
-                </div>
-                <div class="section-text">
-                  独学・オンラインスクールにて勉強中です。<br>
-                  そのため簡単なコーディングは可能です。<br>
-                </div>
-              </div>
-            </div>
-            <div class="card">
+		<div class="title anime">
+			<div class="logo-title">
+				<p>゛いくつになっても似合うジュエリー〟</p>
+				<img src="images/logo-02.png" alt="IRI jewelry">
+			</div>
+		</div>
 
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">JavaScript/JQuery</h3>
-                <div class="rating">
-                  <div class="rate rate1"></div>
-                </div>
-                <div class="section-text">
-                  調べながらであれば可能なものの、<br>
-                  まだまだ勉強中です。今後習得予定です。
-                  </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">Illustrator</h3>
-                <div class="rating">
-                  <div class="rate rate3"></div>
-                </div>
-                <div class="section-text">
-                  図形の作成や簡単な製図など可能です。<br>
-                  高校・専門でも扱ってましたが改めて<br>
-                  オンラインスクールにて学びなおしています。
-                  </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">Photoshop</h3>
-                <div class="rating">
-                  <div class="rate rate3"></div>
-                </div>
-                <div class="section-text">
-                  画像編集、修正など基本的な操作は可能です。<br>
-                  illustrator同様高校・専門で使っておりますが<br>
-                  オンラインスクールにて学びなおしています。
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">Excel/Word/Outlook</h3>
-                <div class="rating">
-                  <div class="rate rate4"></div>
-                </div>
-                <div class="section-text">
-                  独学ですが、今までの事務作業で身につけた<br>
-                  一般的な作業であれば可能です。<br>
-                </div>
-              </div>
-            </div>
-      </section>
-      <section class="section" id="contact">
-        <div class="inner">
-          <div class="section-title-area">
-            <h2 class="section-title">CONTACT</h2>
-            <div class="section-intro">
-              お問い合わせは、メールでお願いいたします。
-            </div>
-          </div>
-          <div class="section-body contact-wrapper">
-            <div class="contact-list">
-              <div class="contact-other">b79xxx@gmail.com</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="footer">
-      <div class="pageTop">
-        <div id="js-pageTop">
-          Page Top
-        </div>
-      </div>
-      <div class="inner">
-        <div class="copyright">Copyright&copy;KOBAYASHI MIO. All Rights Reserved.</>
-        </div>
-    </footer>
-  </div>
+		<!-- about -->
+		
+		<div class="explanation anime" id="aaa">
+			<div class="explanation-coment">
+				<h2>Brand concept</h2>
+				<p>「人(I)と人(I)をひとつの小さなリング(R)で繋ぐ」をコンセプトとした
+					<br>ベビーリングをメインに展開するジュエリーブランドです。
+					<br>
+					<br>代表作であるBaby ring Eternityは、
+					<br>ダイヤを一周留めたベビーリングと天然石のチェーンリングの
+					<br>2つのアイテムを組み合わせることで
+					<br>1つのリングとしても楽しむことができる自由に着脱できるシリーズです。
+					<br>身につける人だけでなく「誰もが楽しめるジュエリー」を目指し、
+					<br>美しい中にも仕掛けや発見があるデザインを展開します。
+				</p>
+			</div>
+			<div class="explanation-section">
+				<img src="images/ring3.jpg" alt="" />
+			</div>
+		</div>
 
-        
+		<div class="about anime">
+			<div class="about-section">
+				<img src="images/inst2.jpg" alt="" />
+				<img class="absolute" src="images/hand1.jpg" alt="" />
+			</div>
+			<div class="about-coment">
+				<h2>First jewelry</h2>
+				<p>ベビーリングとは、赤ちゃんの誕生をお祝いする小さな指輪です。
+					<br>赤ちゃんが成人するまではお母さんがペンダントとして身につけ、
+					<br>20歳のお誕生日にお母さんからプレゼントします。
+					<br>IRI jewelryでは様々なベビーリングをご用意しており
+					<br>既存でのデザインやセミオーダーも承っております。
+				</p>
+			</div>
+		</div>
 
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="qa anime" >
+			<div class="qa-coment">
+				<h2>Q＆A</h2>
+				<div class="accbox">
+					<!--ラベル1-->
+						<label for="label1">ベビーリングについて</label>
+						<input type="checkbox" id="label1" class="cssacc" />
+						<div class="accshow">
+							<!--ここに隠す中身-->
+							<h4>ベビーリングは赤ちゃんの指に必ず入りますか？<h4>
+							<p>IRI jewelryのベビーリングは内径8.5mmで、
+							新生児の指のいずれかに入るとされるサイズです。
+							ですが赤ちゃんの成長は早く個人差もあるため、
+							もしお子様の指に入らない場合でも、「このくらいの指のサイズで生まれてきたんだよ」という
+							記念品やお守りとしてプレゼントしていただければ幸いです。</p>
+							<br>
+							<h4>赤ちゃんに常に着けさせて大丈夫ですか？<h4>
+							<p>安全にお使いいただくため、赤ちゃんの長時間のご着用はご遠慮ください。
+							記念撮影などの短時間でご使用いただき、すぐに赤ちゃんの指から外して保管するか、
+							赤ちゃんが大きくなるまではお母様がジュエリーとしてお楽しみください。
+							また赤ちゃんがベビーリングを着用している間は大人の方が目を離さないようにお願いいたします。</p>
+						</div>
+						<!--//ラベル1-->
+					<!--ラベル2-->
+						<label for="label2">金属の種類について</label>
+						<input type="checkbox" id="label2" class="cssacc" />
+						<div class="accshow">
+							<!--ここに隠す中身-->
+							<h4>K14、K10とは何ですか？</h4>
+							<p>金の純度(含有量)を表しています。
+							K14は58.5％、K10は42％の純金を含んでおり、残りは銀と銅が約半分ずつ入っています。
+							ジュエリーによく使われるK18はオレンジ味が強く、K14やK10はやさしい色味を持ちます。
+							IRIでは落ち着いた色味をもつK14が一番日本人の方の肌になじむと考え、
+							ベビーリングではメインで使用しています。</p>
+							<br>
+							<h4>赤ちゃんが金属アレルギーになる可能性はありますか？</h4>
+							<p>どのブランドにも言えることですが、金属アレルギーは個人差もあるため一概には言えず、
+							非常に難しい問題です。金属アレルギーは、３つの条件が揃ったときに起こると言われています。
+							１つ目は汗と金属が反応してできる「金属イオン」、２つ目はジュエリーを身につけている
+							箇所の「傷や肌荒れ」、３つ目は「菌」です。
+							人は傷などから菌が入った場合、身体が菌を異物と認識します。
+							その際一緒に金属イオンが入り込み、異物と認識されてしまった場合、金属に対してアレル
+							ギー反応を起こしてしまうようになります。
+							つまり赤ちゃんにも大人にも大切なことは、金属がイオン化しにくい良質な金属
+							(ゴールド・プラチナ・シルバー)のみ身につけること、身につける際は傷や汗に気をつけることです。
+							赤ちゃんにベビーリングをはめる際は、指に傷や荒れがないか確認し、
+							汗をふいて清潔に保った状態で着用をお願いいたします。
+							以上のことに気をつけていただき、大人も赤ちゃんも安心してジュエリーを楽しんでいただければ幸いです。</p>
+						</div>
+						<!--//ラベル2-->
+					<!--ラベル3-->
+						<label for="label3">配送について</label>
+						<input type="checkbox" id="label3" class="cssacc" />
+						<div class="accshow">
+							<!--ここに隠す中身-->
+							<h4>注文からどのくらいで届きますか？</h4>
+							<p>在庫があるもの(web shopからカートに入れられるもの)
+							に関しては1週間を目安にお届けさせていただいております。
+							ニューボーンフォトなどの記念撮影や記念日に間に合わせたい場合は、
+							ご出産前にご注文いただくことをお勧めしております。
+							お急ぎの場合はcontactからご連絡いただきますようお願いいたします。</p>
+							<br>
+							<h4>友人や家族のギフトとして注文者とは違う住所に送ってもらえますか？</h4>
+							<p>もちろん可能です。
+							<br>ご注文いただく際、備考欄にその旨をお申し付けください。</p>
+						</div>
+						<!--//ラベル3-->
+					<!--ラベル4-->
+						<label for="label4">アフターサービスについて</label>
+						<input type="checkbox" id="label4" class="cssacc" />
+						<div class="accshow">
+							<!--ここに隠す中身-->
+							<h4>保証期間はどれくらいですか？</h4>
+							<p>通常の使用において不具合が生じた場合、
+							ご購入日から半年間は１回に限り無料で修理を承ります。
+							ただし故意による破損・製品の主な部分の紛失・サイズ直し・経年変化による不具合は除きます。
+							保証期間を経過した修理に関しましては有料にて修理を承りますのでご相談ください。</p>
+							<br>
+							<h4>普段のお手入れはどうすれば良いですか？</h4>
+							<p>ご使用後はやわらかい布、もしくは市販の専用のクロスでやさしく拭いてください。
+							それでも取れない汚れはアフターサービスで磨きが可能です。
+							商品によって料金が異なりますので、
+							お手数ですが保証書に記載の品名をご記載の上contactよりお問い合わせください。</p>
+						</div>
+						<!--//ラベル4-->
+				</div><!--//.accbox-->
+			</div>
+		</div>
 
-    <!-- Background of PhotoSwipe.
-           It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
+		<!-- collection -->
 
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
+		<div class="collection anime" id="bbb">
+			<h2>Collection</h2>
+			<div class="collection-list">
+				
+				<section class="sample3">
+					<a href="https://irijewelry.stores.jp/items/5e5caf54dee1bc68460c0f94">
+						<figure>
+							<img src="images/jewelry1.jpg">
+							<figcaption class="title">
+								<p>Lemon Quartz/K14/K10</p>
+								<p>¥107,800(tax in)</p>
+							</figcaption>
+						</figure>
+					</a>
+					<h3>Baby ring Eternity</h3>
+				</section>
 
-      <!-- Container that holds slides.
-              PhotoSwipe keeps only 3 of them in the DOM to save memory.
-              Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
+				<section class="sample3">
+					<a href="https://irijewelry.stores.jp/items/5e5f607b823e7c347352b9da">
+						<figure>
+							<img src="images/jewelry5.jpg">
+							<figcaption class="title">
+								<p>silver925<br>(K18メッキ)</p>
+								<p>¥18,480(tax in)</p>
+							</figcaption>
+						</figure>
+					</a>
+					<h3>slit ring</h3>
+				</section>
 
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
+				<section class="sample3">
+					<a href="https://irijewelry.stores.jp/items/5e5c680bdee1bc4bfa30a413">
+						<figure>
+							<img src="images/jewelry2.jpg">
+							<figcaption class="title">
+								<p>Green Quartz/K14/K10</p>
+								<p>¥107,800(tax in)</p>
+							</figcaption>
+						</figure>
+					</a>
+					<h3>Baby ring Eternity</h3>
+				</section>
 
-        <div class="pswp__top-bar">
+				<section class="sample3">
+					<a href="https://irijewelry.stores.jp/items/5e5dc98b5d485c2af26bcb27">
+						<figure>
+							<img src="images/jewelry4.jpg">
+							<figcaption class="title">
+								<p>Diamond/K10</p>
+								<p>¥41,800(tax in)</p>
+							</figcaption>
+						</figure>
+					</a>
+					<h3>side melee ring</h3>
+				</section>
 
-          <!--  Controls are self-explanatory. Order can be changed. -->
+				<section class="sample3">
+					<a href="https://irijewelry.stores.jp/items/5e5caf8f96fa432d5f5a3382">
+						<figure>
+							<img src="images/jewelry3.jpg">
+							<figcaption class="title">
+								<p>Rose Quartz/K14/K10</p>
+								<p>¥107,800(tax in)</p>
+							</figcaption>
+						</figure>
+					</a>
+					<h3>Baby ring Eternity</h3>
+				</section>
+				</div>
 
-          <div class="pswp__counter"></div>
+				<!-- <div class="shoplink anime">
+					<a href="https://irijewelry.stores.jp/" class="btn-shine">ONLINE　SHOP</a>
+				</div> -->
 
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+				<div class="slider anime">
+					<img src="images/inst1.jpg">
+					<img src="images/inst2.jpg">
+					<img src="images/inst3.jpg">
+					<img src="images/inst4.jpg">
+					<img src="images/inst5.jpg">
+					<img src="images/inst.jpg">
+				</div>
 
+			</div>
+		</div>
 
+			<!-- news -->
 
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+		<div class="news anime" id="ccc">
+			<h2>News</h2>
+			<ul>
+				<li>
+					<a href="#">
+						<div>
+							<time datetime="2020-8-1">2020.08.01</time>
+							<p class="cat01">SHOP</p>
+						</div>
+						<img src="images/ring2.jpg" alt="">
+						<p> POP UP SHOP 開催のお知らせ </p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<time datetime="2020-8-1">2020.08.01</time>
+							<p class="cat02">NEW</p>
+						</div>
+						<img src="images/ring2.jpg" alt="">
+						<p>新作ジュエリー　S/Sコレクション発表 </p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<time datetime="2020-8-1">2020.08.01</time>
+							<p class="cat01">BOOK</p>
+						</div>
+						<img src="images/ring2.jpg" alt="">
+						<p>8月号　雑誌掲載のお知らせ </p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<time datetime="2020-8-1">2020.08.01</time>
+							<p class="cat02">TV</p>
+						</div>
+						<img src="images/ring2.jpg" alt="">
+						<p>ドラマ「＃＃＃＃＃」で〇〇様に着用いただきました </p>
+					</a>
+				</li>
+			</ul>
+		</div>
 
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+			<!-- contact -->
+		<div id="ddd">
+			<div class="contact-form anime">
+				<h2>Contact</h2>
+				<p>名前（必須）</p>
+				<input>
+				<p>メールアドレス（必須）</p>
+				<input>
+				<p>お問い合わせ内容（必須）</p>
+				<textarea></textarea>
+				<p>※必須項目は必ずご入力ください</p>
+				<input class="contact-submit" type="submit" value="送信">
+			</div>
+		</div>
+	</main>
 
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+	<!-- フッターの部分 -->
+	<footer class="anime">
+		<div class="footer-logo">IRI jewelry</div>
+		<div class="footer-list">
+			<ul>
+				<li><a href="#">会社概要</a></li>
+				<li><a href="#">商品について</a></li>
+				<li><a href="#">問い合わせ</a></li>
+				<li><a href="#">プライバシーポリシー</a></li>
+			</ul>
+		</div>
+	</footer>
+	<small>&copy;IRIjewelry. All Rights Reserved.</small>
+	
+	<script>
+		ScrollReveal().reveal('.anime',{
+			reser: true,
+			mobile: false,
+			origin: 'top',
+			duration: 800,
+			scale: 1.0,
+			delay: 500,
+			opacity: 0,
+		});
+	</script>
 
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-        </button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-        </button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type='text/javascript' src="js/photoswipe/photoswipe.min.js"></script>
-  <script type='text/javascript' src="js/photoswipe/photoswipe-ui-default.js"></script>
-  <script type='text/javascript' src="js/photoswipe/photoswipe_setup.js"></script>
-  <script type='text/javascript' src="js/lazysizes/lazysizes.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
 </body>
 </html>
